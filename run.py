@@ -573,18 +573,30 @@ def main() -> int:
 
     # 1) 拉取候选
     items: List[Item] = []
-    items.extend(fetch_arxiv(cfg, q["arxiv_queries"]))
-    items.extend(fetch_semantic_scholar(cfg, q["s2_query"]))
+    # 重要：在 GitHub Actions 上，任何单一数据源的偶发失败（限流/网络波动）
+    # 不应该导致整次任务失败。因此这里对各数据源做容错，失败则记备注并继续。
+    try:
+        items.extend(fetch_arxiv(cfg, q["arxiv_queries"]))
+    except Exception as e:
+        notes.append(f"arXiv 抓取失败（已跳过）：{type(e).__name__}: {e}")
 
-    scholar_items, scholar_status = fetch_google_scholar_serpapi(cfg, q["scholar_query"])
-    if scholar_status != "ok":
-        if scholar_status == "missing_SERPAPI_KEY":
-            notes.append("未设置 SERPAPI_KEY：已跳过 Google Scholar（建议使用 SerpAPI 以保证稳定）。")
-        elif scholar_status == "disabled":
-            notes.append("Google Scholar 数据源被禁用。")
-        else:
-            notes.append(f"Google Scholar 抓取状态：{scholar_status}")
-    items.extend(scholar_items)
+    try:
+        items.extend(fetch_semantic_scholar(cfg, q["s2_query"]))
+    except Exception as e:
+        notes.append(f"Semantic Scholar 抓取失败（已跳过）：{type(e).__name__}: {e}")
+
+    try:
+        scholar_items, scholar_status = fetch_google_scholar_serpapi(cfg, q["scholar_query"])
+        if scholar_status != "ok":
+            if scholar_status == "missing_SERPAPI_KEY":
+                notes.append("未设置 SERPAPI_KEY：已跳过 Google Scholar（建议使用 SerpAPI 以保证稳定）。")
+            elif scholar_status == "disabled":
+                notes.append("Google Scholar 数据源被禁用。")
+            else:
+                notes.append(f"Google Scholar 抓取状态：{scholar_status}")
+        items.extend(scholar_items)
+    except Exception as e:
+        notes.append(f"Google Scholar 抓取失败（已跳过）：{type(e).__name__}: {e}")
 
     # 2) 过滤增量（仅保留未见过的）
     only_new = bool(cfg.get("output", {}).get("include_only_new_items", True))
@@ -636,4 +648,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
