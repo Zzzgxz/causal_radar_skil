@@ -12,6 +12,9 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      # 提前选择 Node.js 24 运行 JS actions，避免 Node.js 20 退役带来的告警/不确定性
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,4 +51,3 @@ jobs:
           fi
           git commit -m "CausalRadar: daily update ($(date -u +%F))"
           git push
-
