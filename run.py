@@ -23,6 +23,7 @@ import math
 import os
 import re
 import sys
+import time
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import feedparser
@@ -118,15 +119,21 @@ def fetch_arxiv(cfg: Dict[str, Any], queries: List[str]) -> List[Item]:
     # arXiv API：按 submittedDate 倒序取；再按 lookback_days 过滤
     results: List[Item] = []
     for q in queries:
-        # arXiv query 语法参考：http://export.arxiv.org/api/help/api/user-manual
-        # 这里用 all: 进行全文字段匹配；用 OR 组合少量关键词
-        url = (
-            "http://export.arxiv.org/api/query?"
-            f"search_query={q}"
-            f"&start=0&max_results={max_results}"
-            "&sortBy=submittedDate&sortOrder=descending"
-        )
-        feed = feedparser.parse(url)
+        # arXiv query 语法参考：https://info.arxiv.org/help/api/user-manual.html
+        # 注意：search_query 中会包含空格/引号，必须做 URL encode。
+        # 这里用 requests 的 params 来保证编码正确，避免 InvalidURL（URL 不能包含空格等控制字符）。
+        endpoint = "https://export.arxiv.org/api/query"
+        params = {
+            "search_query": q,
+            "start": 0,
+            "max_results": max_results,
+            "sortBy": "submittedDate",
+            "sortOrder": "descending",
+        }
+        headers = {"User-Agent": "CausalRadar/1.0 (daily-research-tracker)"}
+        r = requests.get(endpoint, params=params, headers=headers, timeout=60)
+        r.raise_for_status()
+        feed = feedparser.parse(r.text)
         for e in feed.entries:
             published = _parse_date(getattr(e, "published", None))
             da = _days_ago(published)
@@ -188,9 +195,30 @@ def fetch_semantic_scholar(cfg: Dict[str, Any], query: str) -> List[Item]:
         "fields": "title,authors,year,abstract,url,publicationDate,externalIds",
     }
     headers = {"User-Agent": "CausalRadar/1.0 (daily-research-tracker)"}
-    r = requests.get(url, params=params, headers=headers, timeout=60)
-    r.raise_for_status()
-    data = r.json()
+    # 可选：如果你申请了 Semantic Scholar API Key，可通过环境变量提供以获得更高配额
+    s2_key = os.environ.get("SEMANTIC_SCHOLAR_API_KEY", "").strip()
+    if s2_key:
+        headers["x-api-key"] = s2_key
+
+    # S2 公共接口容易遇到 429（限流）。这里做指数退避重试，避免当天全量失败。
+    last_err: Optional[Exception] = None
+    data: Dict[str, Any] = {}
+    for attempt in range(4):  # 0,1,2,3 共 4 次
+        try:
+            r = requests.get(url, params=params, headers=headers, timeout=60)
+            if r.status_code == 429:
+                raise requests.HTTPError("429 Client Error: rate limited", response=r)
+            r.raise_for_status()
+            data = r.json()
+            last_err = None
+            break
+        except Exception as e:
+            last_err = e
+            # 退避：5s, 15s, 45s
+            if attempt < 3:
+                time.sleep([5, 15, 45][attempt])
+    if last_err is not None:
+        raise last_err
 
     items: List[Item] = []
     for p in data.get("data", []):
