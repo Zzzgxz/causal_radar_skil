@@ -50,7 +50,7 @@ sources:
       - "econ.EM"
       - "cs.IR"
   semantic_scholar:
-    enabled: true
+    enabled: false
     max_results: 40
     lookback_days: 21
   google_scholar:
