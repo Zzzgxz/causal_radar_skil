@@ -1,0 +1,88 @@
+project:
+  name: "CausalRadar"
+  timezone: "UTC"
+
+# 关键词/主题配置：用于检索 query 与相关度打分
+queries:
+  # 用于生成搜索 query 的主题词（会组合）
+  core_topics:
+    - "causal inference"
+    - "uplift modeling"
+    - "treatment effect"
+    - "CATE"
+    - "policy learning"
+    - "marketing"
+    - "pricing"
+    - "promotion"
+    - "coupon"
+    - "e-commerce"
+    - "demand response"
+  application_scenarios:
+    - "coupon"
+    - "voucher"
+    - "discount"
+    - "pricing"
+    - "dynamic pricing"
+    - "promotion"
+    - "recommendation"
+    - "ads"
+  methods:
+    - "uplift"
+    - "heterogeneous treatment effect"
+    - "meta-learner"
+    - "causal forest"
+    - "double machine learning"
+    - "difference-in-differences"
+    - "instrumental variables"
+    - "synthetic control"
+    - "causal bandit"
+    - "off-policy evaluation"
+
+sources:
+  arxiv:
+    enabled: true
+    max_results: 40
+    # 增量窗口：只检索最近 N 天（再由 seen 去重）
+    lookback_days: 14
+    categories:
+      - "cs.LG"
+      - "stat.ML"
+      - "econ.EM"
+      - "cs.IR"
+  semantic_scholar:
+    enabled: true
+    max_results: 40
+    lookback_days: 21
+  google_scholar:
+    enabled: true
+    # 需要 SERPAPI_KEY；否则会被自动跳过
+    max_results: 20
+    lookback_days: 14
+
+output:
+  reports_dir: "reports"
+  latest_report: "reports/latest.md"
+  include_only_new_items: true
+  max_items_in_report: 30
+
+scoring:
+  # 匹配方式：简单的词频+加权；可自行调权重
+  weights:
+    title_keyword: 4.0
+    abstract_keyword: 2.0
+    scenario_keyword: 2.5
+    method_keyword: 2.0
+    recency_bonus: 2.0
+    source_bonus_arxiv: 0.5
+    source_bonus_semanticscholar: 0.8
+    source_bonus_scholar: 0.3
+  # 越新越高（按天衰减）
+  recency_half_life_days: 10
+
+summarization:
+  # 若设置 OPENAI_API_KEY，会启用 LLM 生成结构化小结；否则启发式摘要
+  use_llm_if_available: true
+  llm:
+    model: "gpt-4o-mini"
+    max_chars_per_paper: 6000
+
