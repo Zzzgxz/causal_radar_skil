@@ -1,10 +1,9 @@
-# CausalRadar 日报 - 2026-10-17
+# CausalRadar 日报 - 2026-10-18
 
 - 新增条目数：**0**
 - 数据源：arXiv / Semantic Scholar /（可选）Google Scholar
 
 ## 运行备注
-- arXiv 抓取失败（已跳过）：HTTPError: 503 Server Error: Service Unavailable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22causal+inference%22%2BOR%2Ball%3A%22uplift+modeling%22%29%2BAND%2B%28all%3Acoupon%2BOR%2Ball%3Avoucher%2BOR%2Ball%3Adiscount%2BOR%2Ball%3Apricing%2BOR%2Ball%3A%22dynamic+pricing%22%29&start=0&max_results=40&sortBy=submittedDate&sortOrder=descending
 - 未设置 SERPAPI_KEY：已跳过 Google Scholar（建议使用 SerpAPI 以保证稳定）。
 
 ## 今日新增（按相关度排序）
