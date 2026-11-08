@@ -1,4 +1,4 @@
-# CausalRadar 日报 - 2026-11-07
+# CausalRadar 日报 - 2026-11-08
 
 - 新增条目数：**0**
 - 数据源：arXiv / Semantic Scholar /（可选）Google Scholar
