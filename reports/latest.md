@@ -1,4 +1,4 @@
-# CausalRadar 日报 - 2026-11-25
+# CausalRadar 日报 - 2026-11-26
 
 - 新增条目数：**30**
 - 数据源：arXiv / Semantic Scholar /（可选）Google Scholar
@@ -8,40 +8,84 @@
 
 ## 今日新增（按相关度排序）
 
-### 1. Abelian envelopes and quantum groups in Knop's interpolation categories
+### 1. Shape-Aware Three-Way Merge for RDF Knowledge Graphs: The schema defines the conflict: an implementation and evaluation
 
-- 作者：Johannes Flake, Peter Mader｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**8.50**
-- 链接：https://arxiv.org/abs/2611.33152v1
+- 作者：Steve Brown｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**7.00**
+- 链接：https://arxiv.org/abs/2611.34870v1
 
-> 命中：hit_title=['CATE']；hit_abstract=['CATE']
+> 命中：hit_scenario=['ads']；hit_abstract=['CATE']
 
 ### 背景/问题
-We show the existence of abelian envelopes for large classes of subcategories of Knop's tensor envelopes. It follows that these abelian envelopes correspond to groups or more generally Hopf algebras (``quantum groups'') in their parent interpolation categories.
+Merging RDF serializations creates ordering conflicts and misses semantic ones. We describe and evaluate a three-way merge in which the schema defines a conflict: set algebra combines canonical triples, and a slot is contended only where a SHACL shape bounds its cardinality and both sides' changes cannot stand within that bound.
 
 ### 方法
 未在摘要中明确给出。
 
 ### 实验/数据
-未在摘要中明确给出。
+In a study of evolving shape contracts, merging shape declarations first handles the tested cardinality changes, while datatype evolution exposes a detector blind spot caught by post-merge validation. Under wrong shapes, a missing bound loses data silently and a spurious one only adds questions.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Our main technique is an explicit construction of objects corresponding to coordinate algebras using the calculus of relations that Knop's categories are based on.
+The supported claim is fewer human decisions with nothing silently lost, for cardinality conflicts in one deployment, not general merge correctness.
 
-### 2. E-MAPS: Event-Based Promptable Video Segmentation with Memory-as-Prompt
+### 2. Mixture-of-Loops Transformer
 
-- 作者：Adonay Demewez Gebremedhin, Mohamad Alansari, Wessam Shehieb, Muzammal Naseer, Hasan AlMarzouqi, Sajid Javed, Naoufel Werghi｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**5.00**
-- 链接：https://arxiv.org/abs/2611.33017v1
+- 作者：Lianghui Zhu, Shijie Wang, Xinggang Wang, Jinze Bai, Bo Wang, Xiang Bai｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**5.00**
+- 链接：https://arxiv.org/abs/2611.34923v1
 
 > 命中：hit_scenario=['ads']
 
 ### 背景/问题
-RGB-based video object segmentation (VOS) remains brittle under fast motion and adverse illumination. Event cameras preserve signal under blur and challenging exposure, but provide little evidence when motion slows.
+Looped Transformers boost expressivity by reusing shared layers across loops, yet at the cost of efficiency. Pushing their expressivity-efficiency frontier requires rethinking the core mechanism connecting adjacent loops: What should be passed as a Transformer loops?
 
 ### 方法
-We present Event Memory-As-Prompt Segmentation (E-MAPS), which transfers a pretrained promptable segmenter to event streams and learns propagation and correction.
+In 400B-token pretraining, U-MoLT outperforms OLMo3 across 700M/1.5B dense and 3B MoE models, achieving 1.7x validation cross-entropy (CE) token efficiency at 700M while improving 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points. 1,000.6 ms on S-size (~113M) models.
+
+### 实验/数据
+未在摘要中明确给出。
+
+### 结果
+In 400B-token pretraining, U-MoLT outperforms OLMo3 across 700M/1.5B dense and 3B MoE models, achieving 1.7x validation cross-entropy (CE) token efficiency at 700M while improving 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points.
+
+### 结论/启示（面向电商发券、定价、营销算法等应用）
+Code is available at https://github.com/hustvl/MoLT
+
+### 3. Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs
+
+- 作者：Agelos Kratimenos, Kostas Daniilidis, Evangelos Chatzipantazis｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**5.00**
+- 链接：https://arxiv.org/abs/2611.34914v1
+
+> 命中：hit_scenario=['ads']
+
+### 背景/问题
+Vision-language-action models (VLAs) are capable low-level controllers, but they tie where objects go to the layouts they were trained on: when objects are moved or obstacles block the way, they carry them to the wrong place or into collisions. Fine-tuning on new layouts needs robot data for each one and erodes skills the model already has.
+
+### 方法
+Vision-language-action models (VLAs) are capable low-level controllers, but they tie where objects go to the layouts they were trained on: when objects are moved or obstacles block the way, they carry them to the wrong place or into collisions. Fine-tuning on new layouts needs robot data for each one and erodes skills the model already has. All code, models and data will be made public.
+
+### 实验/数据
+Fine-tuning on new layouts needs robot data for each one and erodes skills the model already has. On a real Franka, with a prior trained purely in simulation, it guides the frozen DROID π0.5 around an obstacle and to a placement at the limit of the arm's reach, where it otherwise fails. All code, models and data will be made public.
+
+### 结果
+未在摘要中明确给出。
+
+### 结论/启示（面向电商发券、定价、营销算法等应用）
+All code, models and data will be made public.
+
+### 4. The oxygen cold trap in protoplanetary discs
+
+- 作者：Peter Woitke｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**5.00**
+- 链接：https://arxiv.org/abs/2611.34867v1
+
+> 命中：hit_scenario=['ads']
+
+### 背景/问题
+The diffusive transport of oxygen in protoplanetary discs followed by sequestration into ice in the midplane, a process known as the cold trap, can substantially alter the chemical environment where planets form. This paper presents a new time-dependent modelling framework that allows us to consistently simulate kinetic gas-phase chemistry, ice growth and desorption, turbulent diffusive mixing, and gravitational settling of icy particles with a changing particle size distribution over million-year timescales in one-dimensional vertical columns.
+
+### 方法
+This paper presents a new time-dependent modelling framework that allows us to consistently simulate kinetic gas-phase chemistry, ice growth and desorption, turbulent diffusive mixing, and gravitational settling of icy particles with a changing particle size distribution over million-year timescales in one-dimensional vertical columns. Applying our model to a T Tauri disc across radii from 1 to 100 au reveals that vertical cold trapping becomes an effective mechanism once the diffusion-to-settling timescale ratio exceeds unity, simultaneously driving the gas-phase C/O up toward unity, and the gas-phase C/H down, by up to two orders of magnitude at large distances. All models feature the development of an upward counter-flux due to the turbulent up-whirling of icy particles followed by ice sublimation above the horizontal icelines, which brings the cold trapping to a halt and eventually establishes a relaxed vertical structure after about $10^4$ to $10^6$ yr, depending on the radial distance.
 
 ### 实验/数据
 未在摘要中明确给出。
@@ -50,209 +94,243 @@ We present Event Memory-As-Prompt Segmentation (E-MAPS), which transfers a pretr
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Project page: https://github.com/adonaydem/emaps-wacv
+However, in none of our models does the C/O ratio exceed unity, which is a consequence of CO-blocking, a chemical process where water molecules naturally stop forming once C/O approaches unity.
 
-### 3. Improved Downward-Closed Delegation Bounds
+### 5. Lattice gauge theory computation of $1/m_Q$ and $1/m_Q^2$ corrections to the quarkonium potential
 
-- 作者：Hamed Abdi, Kiarash Banihashem, MohammadTaghi Hajiaghayi, Danny Mittal｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.33095v1
+- 作者：Michael Eichberg, Marc Wagner｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**5.00**
+- 链接：https://arxiv.org/abs/2611.34836v1
+
+> 命中：hit_scenario=['ads']
+
+### 背景/问题
+We compute the static quark-antiquark potential and its $1/m_Q$ and $1/m_Q^2$ corrections, i.e.\ the $1/m_Q$ potential and all $1/m_Q^2$ potentials, which can be expressed in terms of correlators of two field strength insertions, in SU(3) lattice gauge theory and provide parameterizations for quark-antiquark separations $0.2 \, \text{fm} \lesssim r \lesssim 0.7 \, \text{fm}$. The field strength insertions in generalized Wilson loops are renormalized using gradient flow, which also leads to small statistical uncertainties.
+
+### 方法
+未在摘要中明确给出。
+
+### 实验/数据
+We compute the static quark-antiquark potential and its $1/m_Q$ and $1/m_Q^2$ corrections, i.e.\ the $1/m_Q$ potential and all $1/m_Q^2$ potentials, which can be expressed in terms of correlators of two field strength insertions, in SU(3) lattice gauge theory and provide parameterizations for quark-antiquark separations $0.2 \, \text{fm} \lesssim r \lesssim 0.7 \, \text{fm}$. The field strength insertions in generalized Wilson loops are renormalized using gradient flow, which also leads to small statistical uncertainties. They can easily be converted to specific heavy quark masses, e.g.\ for Born-Oppenheimer effective field theory studies of quarkonium.
+
+### 结果
+未在摘要中明确给出。
+
+### 结论/启示（面向电商发券、定价、营销算法等应用）
+They can easily be converted to specific heavy quark masses, e.g.\ for Born-Oppenheimer effective field theory studies of quarkonium.
+
+### 6. HOG-WAM: Improving Visual Robustness through Future Gradient Prediction
+
+- 作者：Boxuan Dong, Yupeng Qian, Ying Wu, Heshuai Li, Junhao Tan, Zhenxiong Tan, Weijia Wu, Weihao Yu｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**5.00**
+- 链接：https://arxiv.org/abs/2611.34811v1
+
+> 命中：hit_scenario=['ads']
+
+### 背景/问题
+World-action models jointly predict future observations and actions, yet visual corruption can disrupt the resulting policies. We introduce HOG-WAM, which adds future Histograms of Oriented Gradients (HOG) as structural supervision derived directly from demonstration images.
+
+### 方法
+World-action models jointly predict future observations and actions, yet visual corruption can disrupt the resulting policies.
+
+### 实验/数据
+These findings support future-gradient prediction as complementary supervision for visually robust control, with larger absolute gains on physical tasks than in simulation.
+
+### 结果
+Mixed-noise success increases from 78.86% to 82.86% relative to FastWAM, with comparable performance on clean scenes. On LIBERO Plus, overall success increases from 74.49% to 75.26%, with the largest gain under sensor noise, from 74.14% to 78.89%. Across four Franka tasks, average success increases from 40% to 59% under clean observations and from 17% to 24% under noisy observations.
+
+### 结论/启示（面向电商发券、定价、营销算法等应用）
+Code is available at https://github.com/iPPLab/HOG-WAM.
+
+### 7. Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models
+
+- 作者：Dezhi Luo, Fengyuan Yu, Haotian Zhang, Zehong Zhao, Ran Ji, Siyuan An, Huayi Qin, Qingying Gao 等｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**4.50**
+- 链接：https://arxiv.org/abs/2611.34813v1
 
 > 命中：hit_abstract=['CATE']
 
 ### 背景/问题
-We study delegated choice under a downward-closed feasibility constraint, where the principal and agent values of each item may be arbitrarily correlated but items are independent. We give a deterministic, agent-oblivious menu that guarantees the principal more than $29/70\approx0.41429$ of the expected offline optimum under every best response, including ties resolved against the principal.
+Video generation models are increasingly evaluated as visual reasoners: given a first frame and a natural-language prompt, can the model produce the video in which the specified task is carried out? The paradigm is considered advantageous because the reasoning is native to the visual medium, unfolding directly in the frames rather than through language or code.
 
 ### 方法
-未在摘要中明确给出。
+Video generation models are increasingly evaluated as visual reasoners: given a first frame and a natural-language prompt, can the model produce the video in which the specified task is carried out? On VBVR-Pro-Bench (Xu et al., 2026), a 500-instance suite spanning five cognitive categories with symbolic ground truth, the agent receives the same first frame and prompt as the video model, with no access to ground truth, metadata or generation models, and one attempt per instance. Three closed-model agents (Codex with gpt-6-astra, Claude Code with Fable 5.1 and Gemini CLI with Gemini 3.1 Pro) score 0.923, 0.894 and 0.893, each more than 0.22 above the strongest video model.
 
 ### 实验/数据
-We give a deterministic, agent-oblivious menu that guarantees the principal more than $29/70\approx0.41429$ of the expected offline optimum under every best response, including ties resolved against the principal.
+On VBVR-Pro-Bench (Xu et al., 2026), a 500-instance suite spanning five cognitive categories with symbolic ground truth, the agent receives the same first frame and prompt as the video model, with no access to ground truth, metadata or generation models, and one attempt per instance.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-We also give a short analytic proof that a single threshold on the reported total value guarantees $3/10$.
+We further distinguish depictive programs, which navigate the image to recover a transferable scheme, from propositional programs, which operate on hard-coded values, revealing how visual reasoning unfolds in agent-written programs and what it implies for its nature of reasoning in general.
 
-### 4. The Reliability Function of Error-Correcting Output Codes with Noisy Binary Classifiers
+### 8. The THESAN-ZOOM project: interpreting candidate Population III-enriched absorption line systems during reionization
 
-- 作者：Gendo Kumoi, Hideki Yagi, Manabu Kobayashi, Shigeichi Hirasawa｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.33068v1
+- 作者：Giulia Pruto, Laura Keating, Rahul Kannan, Ewald Puchwein, Aaron Smith, Enrico Garaldi, Mark Vogelsberger, William McClymont 等｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**4.50**
+- 链接：https://arxiv.org/abs/2611.34789v1
 
 > 命中：hit_abstract=['CATE']
 
 ### 背景/问题
-Error-correcting output coding (ECOC) builds a multi-class classifier from binary classifiers. We study the excess error rate of ECOC over the Bayes (MAP) classifier when each binary classifier outputs a posterior estimate whose log-odds is corrupted by Gaussian noise.
+With JWST, metal absorption lines are now being detected at increasingly high redshift, where signatures of the first generation of stars (Population III) may be observable. Interpreting observations of possible Pop III-enriched gas is challenging, as metals released by stars inevitably mix with pristine gas accreting onto galaxies and recycled gas from different episodes of star formation.
 
 ### 方法
-未在摘要中明确给出。
+By running an additional simulation with an updated THESAN-ZOOM model containing Pop III stars, we show that this has a large impact on the simulated abundance ratios, pushing them closer to those observed in potential Pop III-enriched gas.
 
 ### 实验/数据
-未在摘要中明确给出。
+With THESAN-ZOOM, a set of high-resolution radiation hydrodynamical zoom-in simulations of galaxies, we investigate the metal abundance patterns observable in absorption. As our fiducial simulations do not include Pop III enrichment channels, our primary goal is to test how galaxy formation processes can shape observed abundance ratios. In our simulations, a larger dispersion in abundance ratio distributions (often interpreted as possible evidence of pollution from the first stellar populations) naturally arises with increasing redshift, when the metallicity and dust content are lower.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-On ResNet-50 features of CIFAR-10/100 and ImageNet-1k, the excess error over a log-likelihood decoding reference decreases with $d_{\min}$ and, for larger $M$, levels off at a moderate distance, while codes with $d_{\min}=1$ degrade as $M$ grows.
+By running an additional simulation with an updated THESAN-ZOOM model containing Pop III stars, we show that this has a large impact on the simulated abundance ratios, pushing them closer to those observed in potential Pop III-enriched gas.
 
-### 5. PORTA: Systematic Discovery of Vulnerabilities in Identity Brokers
+### 9. A Mesh for Every Moment
 
-- 作者：Zixu Zhou, Xiangyu Guo, Ilya Grishchenko, David Lie｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.33015v1
-
-> 命中：hit_abstract=['CATE']
+- 作者：Roy Or-El, Jeong Joon Park, Ira Kemelmacher-Shlizerman｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34939v1
 
 ### 背景/问题
-Identity brokers such as Keycloak, Vault, and Dex translate authentication proofs from an upstream identity provider into sessions for downstream services. Due to their central role in authentication and trust mediation, a single vulnerability in a broker compromises every downstream service behind it.
+We present MEMO (a Mesh for Every MOment), a method that reconstructs the geometry of complete dynamic scenes, captured by multiple synchronized cameras, and extracts a mesh at every frame. Existing dynamic Gaussian splatting methods either model appearance alone or target isolated objects segmented by foreground masks, and all of them recover meshes by TSDF fusion or Poisson reconstruction, whose fixed grids limit the detail they can capture.
 
 ### 方法
-Equipped with this information, our automated tool PORTA leverages a large language model (LLM) to generate API invocation sequences corresponding to the high-level action categories, and oracle assertions aligned with the specified invariants.
+We present MEMO (a Mesh for Every MOment), a method that reconstructs the geometry of complete dynamic scenes, captured by multiple synchronized cameras, and extracts a mesh at every frame. Existing dynamic Gaussian splatting methods either model appearance alone or target isolated objects segmented by foreground masks, and all of them recover meshes by TSDF fusion or Poisson reconstruction, whose fixed grids limit the detail they can capture. At the core of MEMO is a per-Gaussian motion model inspired by Gaussian processes, which represents each Gaussian's position and rotation over time as a combination of temporal Gaussian kernels.
 
 ### 实验/数据
-未在摘要中明确给出。
+The model keeps every Gaussian a valid surface element throughout the sequence and carries an implicit representation of the dynamic geometry, so a mesh can be derived at any time from a field defined by the Gaussians. We evaluate MEMO on Blender-Moments, a new benchmark of nine animated scenes with ground-truth meshes at every frame, and on two real-world datasets.
 
 ### 结果
-未在摘要中明确给出。
+MEMO reconstructs the most accurate geometry among state-of-the-art methods, and remains competitive in novel-view synthesis and training time.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-We responsibly disclosed all discovered vulnerabilities: 29 have been confirmed, 14 patched, and 19 assigned CVE numbers, with 10 CVEs rated as critical.
+Project page: https://memo-4d.github.io
 
-### 6. Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study
+### 10. Attack Policy Selection can Mislead Monitor Evaluators
 
-- 作者：Neda Ghafouri｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.33012v1
-
-> 命中：hit_abstract=['CATE']
+- 作者：Charlie Griffin, Oliver Makins, Asa Cooper Stickland, Alessandro Abate, Yarin Gal, Abby D'Cruz, Xander Davies｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34934v1
 
 ### 背景/问题
-As clinical AI agents begin to interact with electronic health records (EHRs), large language models (LLMs) are increasingly used to evaluate their actions. But how reliably can these judges recognize clinically dangerous mistakes, especially when an agent appears to have completed its task successfully?
+AI monitors, classifiers that flag dangerous behaviour by AI agents, are often evaluated against transcripts generated by attack policies acting as proxies for dangerous behaviour in deployment. We evaluate an ex-production OpenAI monitor as a case study and find that measured false negative rate is highly sensitive to both the method used to generate attack policies and the level of optimisation applied within that method.
 
 ### 方法
-As clinical AI agents begin to interact with electronic health records (EHRs), large language models (LLMs) are increasingly used to evaluate their actions. MedGemma performed worse than the general-purpose model and was the only judge to miss potentially dangerous medication overdoses.
+未在摘要中明确给出。
 
 ### 实验/数据
-The experiments include 416 faulty trajectories, eight error categories, and six open-weight LLM judges.
+未在摘要中明确给出。
 
 ### 结果
-The findings show that access to clinical evidence significantly improves judge reliability. With full trajectory information, the ability to distinguish unsafe actions from correct ones reaches a score of 0.75, and providing actual EHR responses improves discrimination by 0.39. Surprisingly, including the agent's reasoning does not improve overall performance and reduces detection of incorrectly reported clinical values by 0.18, which remain the hardest errors to detect.
+未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-We also find that the benchmark's original grader accepts all 38 trajectories with an intentionally skipped laboratory check, while combining LLM judges with a rule-based checker informed by the full EHR record detects 97% of injected faults.
+Making convincing arguments remains an open problem.
 
-### 7. A Study of Three Intrinsically Luminous Long Period Interacting Eclipsing Binaries in the Galaxy and the Small Magellanic Cloud
+### 11. $μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents
 
-- 作者：T. J. Davidge｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.33002v1
-
-> 命中：hit_abstract=['CATE']
+- 作者：Qihao Lin, Guanxu Chen, Shuhang Zheng, Xiaoya Lu, Jingyi Yang, Terumi Chiba, Wenyi Yu, Chao Zhang 等｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34920v1
 
 ### 背景/问题
-The properties of the eclipsing binaries SMC004701.39-732645.8, SMC005609.41-722809.2 and PW Pup are examined using archival photometric and spectroscopic observations. These systems have orbital periods of hundreds of days, and contain highly evolved components with temperature differences of at least 1000 - 2000K.
+Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session.
 
 ### 方法
-未在摘要中明确给出。
+Across 13 voice agents, proprietary systems peak at 62.24\% tool-free and 65.44\% tool-augmented success, while open-weight models remain below 20\%. ATC diagnostics show that open-weight models lag primarily in multi-turn attribution and threading, and controlled contrasts reveal that larger groups consistently degrade joint task success across capable systems.
 
 ### 实验/数据
-未在摘要中明确给出。
+By coupling reactive multi-user simulation with verifiable session-level outcomes, $μ$-Bench provides a rigorous testbed for shared voice agents.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-The light associated with the secondary likely originates from a shell or disk that obscures a hotter central star.
+By coupling reactive multi-user simulation with verifiable session-level outcomes, $μ$-Bench provides a rigorous testbed for shared voice agents.
 
-### 8. CAPER: PartGround and PlanRefine for Reliable Manual-Guided Robotic Assembly Planning
+### 12. Memory Is Not Ground Truth: Revising Navigation Authority under Unreliable VLM Evidence for Persistent Semantic Navigation
 
-- 作者：Hanzhao Xi, Zhonghao Li, Suxuan Liu, Shanghan Zhou, Zesheng Chen, Qiufeng Wang, Yaran Chen｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.32986v1
-
-> 命中：hit_abstract=['CATE']
+- 作者：Sumukh Shrote, Shenbagaraj Kannapiran, Eric Eaton, Camillo Jose Taylor｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34915v1
 
 ### 背景/问题
-Vision-Language-Models (VLMs) used in robot task planning to derive assembly procedures from existing manuals may correctly interpret individual assembly actions yet confuse exact part identities, predict unsupported Part IDs, or produce inconsistent parts across assembly steps. Thus, we propose CAPER (Capacity-Aware Part-grounding and Evidence Refinement), a manual-guided robotic assembly framework that enables VLMs to generate assembly procedures with two modules--PartGround and PlanRefine.
+Vision-language models (VLMs) enable robots to reason about semantic and spatio-temporal context, verify task-relevant objects, and guide sensing and navigation. Persistent memory can reduce redundant search for field robots, but when should a memory continue to guide behavior?
 
 ### 方法
-Vision-Language-Models (VLMs) used in robot task planning to derive assembly procedures from existing manuals may correctly interpret individual assembly actions yet confuse exact part identities, predict unsupported Part IDs, or produce inconsistent parts across assembly steps. Thus, we propose CAPER (Capacity-Aware Part-grounding and Evidence Refinement), a manual-guided robotic assembly framework that enables VLMs to generate assembly procedures with two modules--PartGround and PlanRefine. PartGround aligns step-level manual evidence with product-specific inventory and part-reference information to identify exact Part IDs and quantities, transforming free-form hardware prediction into evidence-guided assignments represented in a shared Assembly Intermediate Representation (Assembly IR).
+Vision-language models (VLMs) enable robots to reason about semantic and spatio-temporal context, verify task-relevant objects, and guide sensing and navigation. In three matched real-robot decision contexts, an episode-local baseline selected a stale memory as its navigation objective in every case, whereas our method selected semantic frontiers in all three.
 
 ### 实验/数据
-We evaluate CAPER on the IKEA Assembly in the Wild (IAW) dataset. Experiment results show that CAPER reaches a Finite-inventory Consistency Rate of 83.33% and produces zero observed out-of-inventory Part-ID occurrences.
+Persistent memory can reduce redundant search for field robots, but when should a memory continue to guide behavior? Our experiments show why this evidence can remain ambiguous under VLM-based perception. False-negative rates vary substantially across objects, nearby revisits often reproduce the same detector outcome, and some matched target-present and target-removed experiments yield identical miss histories.
 
 ### 结果
-Overall, the results indicate that PartGround and PlanRefine improve part reliability, while also enhancing finite-inventory consistency and local prediction accuracy.
+未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Project page and video: https://xhzzzz123.github.io/CAPER/
+These results support revising memory actionability rather than interpreting failed detection as object absence.
 
-### 9. Pragmatic Deeply Debiased ML
+### 13. The thermodynamic budget of objectivity
 
-- 作者：Victor Chernozhukov, Chengchun Shi｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**4.50**
-- 链接：https://arxiv.org/abs/2611.33069v1
-
-> 命中：hit_abstract=['treatment effect']
+- 作者：Wonyong Chung｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34909v1
 
 ### 背景/问题
-Debiased machine learning (DML) combines a fitted outcome regression with weighted residuals to remove first-order regularization bias when estimating parameters such as average treatment effects, yet a second-order bias remains whenever regression and weighting errors align. For linear regression functionals, we target this second-order bias by training a strong learner to predict first-stage residuals from many covariates, yielding a one-dimensional (or low-dimensional) working model whose bias contribution is estimated on an independent sample.
+An event becomes a fact when enough independent records of it exist such that no operation is possible that leaves all observers ignorant of it again. Records are physical, and creating, keeping, and destroying them have thermodynamic costs.
 
 ### 方法
-For linear regression functionals, we target this second-order bias by training a strong learner to predict first-stage residuals from many covariates, yielding a one-dimensional (or low-dimensional) working model whose bias contribution is estimated on an independent sample.
+We compute these costs exactly in a minimal broadcast model with a driven central qubit writing records into $N$ initially thermal registers, with work sources and baths at temperature $T$.
 
 ### 实验/数据
-In our empirical and simulation studies, strong initial DML learners often leave the second-order correction small relative to sampling uncertainty, in which case the correction serves as a diagnostic check alongside sensitivity bounds for any remaining misspecification bias.
+未在摘要中明确给出。
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-In our empirical and simulation studies, strong initial DML learners often leave the second-order correction small relative to sampling uncertainty, in which case the correction serves as a diagnostic check alongside sensitivity bounds for any remaining misspecification bias.
+Records in re-thermalizing media are nonequilibrium steady states, and the minimal power to maintain a record at $(R,δ)$ is the known two-state driving bound evaluated at the record-quality boundary.
 
-### 10. OmniAct: One Policy, One Million Embodiments
+### 14. Product-Linear POSIX Parsing
 
-- 作者：Xiang Fan, Yuheng Wang, Jiayuan Yan, Bohan Fang, Wisdom Oluchi Ikezogwo, Ainaz Eftekhar, Max Argus, Jason Ren 等｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33158v1
+- 作者：Yuya Uezato｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34904v1
 
 ### 背景/问题
-A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies.
+POSIX regular-expression matching reports capture spans determined by the parse tree that its disambiguation rules select. Thompson's classical construction decides whether an expression $E$ matches a text $w$ in product-linear time, $O(|E|\,|w|)$.
 
 ### 方法
-Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks.
+未在摘要中明确给出。
 
 ### 实验/数据
-To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks.
+未在摘要中明确给出。
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Project: https://omniact.github.io/
+It implements POSIX selection with lists of end positions of the open subexpressions, which it compares and updates in constant time.
 
-### 11. Topological insulators on site-eliminated, projected, and patterned fractal lattices
+### 15. ProbFaS: Probabilistic Video Frame Selection for MLLMs via Multi-Fidelity Calibration
 
-- 作者：Aiden Mains, Danile Salib, Christopher Leong, Bitan Roy｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33155v1
+- 作者：Tianru Zhang, Mayank Nautiyal, Hugo Eidmann, Prashant Singh, Ekta Vats｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34903v1
 
 ### 背景/问题
-Identifying fractal lattices of fractional (Hausdorff) dimension as geometric descendants of parent crystals, we showcase the successful realization of canonical topological insulators in one-, two-, and three-dimensional crystals on their self-similar descents using three complementary approaches, starting from lattice-regularized models in integer dimensions. (a) In the first approach, we construct the fractal Hamiltonian by removing all parent-lattice sites that do not belong to such a network (method of site elimination).
+Processing long videos with multimodal large language models (MLLMs) is prohibitively expensive, making informative frame selection essential for accurate video understanding. The default uniform sampling often misses task-relevant keyframes, while recent training-free selectors instead pick frames by how well each one matches the question under an image-text alignment (ITA) score.
 
 ### 方法
-Identifying fractal lattices of fractional (Hausdorff) dimension as geometric descendants of parent crystals, we showcase the successful realization of canonical topological insulators in one-, two-, and three-dimensional crystals on their self-similar descents using three complementary approaches, starting from lattice-regularized models in integer dimensions. (a) In the first approach, we construct the fractal Hamiltonian by removing all parent-lattice sites that do not belong to such a network (method of site elimination). (c) In the third approach, we retain the parent-crystal lattice intact but spatially pattern the on-site mass parameter, which controls the topology of the parent insulating system, such that it assumes two topologically distinct values on the fractal network and its complement (patterned fractal lattices).
+Processing long videos with multimodal large language models (MLLMs) is prohibitively expensive, making informative frame selection essential for accurate video understanding. We present ProbFaS, a training- and label-free probabilistic pipeline that fuses both signals for key frame selection.
 
 ### 实验/数据
 未在摘要中明确给出。
 
 ### 结果
-未在摘要中明确给出。
+Across Video-MME, MLVU and LongVideoBench, ProbFaS is the most accurate among fourteen state-of-the-art training-free selectors and uniform sampling in 13 of 15 settings (8-128 frames), outperforming the strongest baseline by up to 3.1 percentage points.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-B 110, L241302 (2024)].
+On MLVU and LongVideoBench, 32 ProbFaS frames match or surpass the top baseline at 128 frames and uniform sampling with up to 768 frames.
 
-### 12. Dominoes tiling a common figure
+### 16. The Splash population confined to the Milky Way bar region
 
-- 作者：Peter Keevash, Jeck Lim｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33154v1
+- 作者：Aakash Pandey, Ortwin Gerhard｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34890v1
 
 ### 背景/问题
-Call a two-element subset of $\mathbb{Z}^2$ a domino. Given finitely many dominoes $D_1,\ldots,D_k$, we show that there exists a finite non-empty $B\subset \mathbb{Z}^2$ such that $B$ can be partitioned into disjoint translates of $D_i$ for all $i$.
+We investigate the chemo-dynamical properties of in-situ stars in the Galactic bar region (central $5$ kpc), specifically the inner Galactic counterpart of the solar-neighbourhood Splash population (in situ halo). We use a sample of APOGEE DR17 red giants with Gaia astrometry and AstroNN distances, and separate bulge/bar stellar populations dynamically using a normalised time-averaged bar-frame angular momentum, $\mathcal{V}_φ$.
 
 ### 方法
 未在摘要中明确给出。
@@ -261,101 +339,101 @@ Call a two-element subset of $\mathbb{Z}^2$ a domino. Given finitely many domino
 未在摘要中明确给出。
 
 ### 结果
-未在摘要中明确给出。
+The presence of a significant central Splash underscores the role of the Gaia-Sausage-Enceladus merger in the early history of the Galaxy.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-The proof uses a new absorption mechanism for perfect matchings in algebraically defined hypergraphs.
+At metallicities [Fe/H] $<0.3$, we find no additional classical bulge population in these maps beyond the central Splash and proto-Galactic populations $-$ the high-$α$ bulge appears to have evolved from the early high-$α$ disc.
 
-### 13. Prospects and limitations of adaptive variational quantum algorithms for lattice field theories: a case study in 2+1 dimensions
+### 17. Atheism and Cross-Country National Cognitive Skills: Evidence from a Beta Regression Analysis
 
-- 作者：Nico Dichter, Andrea Bulgarelli, Lena Funcke, Stefan Kühn｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33138v1
+- 作者：Tatiene C. Souza, Francisco Cribari-Neto｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34885v1
 
 ### 背景/问题
-The variational quantum algorithm ADAPT-VQE has previously been used to prepare the vacuum of lattice gauge theories in $1+1D$. In this paper, we study whether it extends to higher dimensions.
+This study performs a beta regression analysis to investigate how country-level cognitive skills---measured using harmonized large-scale international educational assessments and expressed on an IQ-type scale---are associated with the prevalence of atheism in 131 countries. We find that this association is nonlinear: at low levels of cognitive skills, increases are associated with lower expected levels of atheism, whereas beyond a threshold, they are associated with higher expected atheism rates.
 
 ### 方法
-We identify two general limitations of ADAPT-VQE.
+We estimate elasticities of expected atheism rates with respect to cognitive skills for all countries in the sample and introduce the concept of the atheism gap to identify countries where observed prevalence is substantially higher or lower than predicted by their conditioning variables.
 
 ### 实验/数据
-We illustrate both limitations, also providing examples from literature, and present a first application of ADAPT-VQE to a lattice field theory in $2+1D$, namely free Wilson fermions, where both obstacles occur. These findings give practical guidelines for applying ADAPT-VQE to lattice field theories beyond $1+1D$.
+We find that this association is nonlinear: at low levels of cognitive skills, increases are associated with lower expected levels of atheism, whereas beyond a threshold, they are associated with higher expected atheism rates.
 
 ### 结果
-Adding charge conjugation symmetry to the operator pool improves the results, and combining different pools with suitable initial states recovers the ground and first excited states over the full mass range.
+We find that this association is nonlinear: at low levels of cognitive skills, increases are associated with lower expected levels of atheism, whereas beyond a threshold, they are associated with higher expected atheism rates.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-These findings give practical guidelines for applying ADAPT-VQE to lattice field theories beyond $1+1D$.
+We estimate elasticities of expected atheism rates with respect to cognitive skills for all countries in the sample and introduce the concept of the atheism gap to identify countries where observed prevalence is substantially higher or lower than predicted by their conditioning variables.
 
-### 14. A Koashi--Imoto Criterion for Holevo-Rate Visible Compression
+### 18. Letter of Intent: AN Underground Belayed In-Shaft (ANUBIS) detector
 
-- 作者：Anthony M. Polloreno｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33129v1
+- 作者：ANUBIS Collaboration｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34882v1
 
 ### 背景/问题
-For a finite memoryless quantum source whose encoder knows the sequence of classical labels, we determine when the Holevo rate is achievable with shared classical randomness and no shared entanglement. In the maximal Koashi--Imoto decomposition of the signal ensemble, this occurs exactly when each signal is pure on the quantum part of every sector it occupies.
+Long-lived particles (LLPs) arise naturally in many extensions of the Standard Model, notably in models with dark matter candidates or motivated by baryogenesis. LLPs produced at or above the electroweak scale with decay lengths of tens of metres escape the general-purpose LHC detectors and cannot be produced at sufficient rates in forward and beam-dump experiments.
 
 ### 方法
-To prove the converse, we apply Fawzi--Renner recovery to a hypothetical sequence of visible codes approaching the Holevo rate at vanishing local error, then invoke a decoupling bound of Baghali Khanian and Winter for blind compression.
+Long-lived particles (LLPs) arise naturally in many extensions of the Standard Model, notably in models with dark matter candidates or motivated by baryogenesis. This Letter of Intent proposes the ANUBIS detector, which would instrument the ceiling of the ATLAS cavern and the bottom of its access shafts with about 1600~m$^2$ of resistive plate chambers in two tracking layers about 1~m apart, using the air-filled volume above the ATLAS detector as decay volume.
 
 ### 实验/数据
-未在摘要中明确给出。
+LLPs produced at or above the electroweak scale with decay lengths of tens of metres escape the general-purpose LHC detectors and cannot be produced at sufficient rates in forward and beam-dump experiments. The ANUBIS detector exploits the full ATLAS event information to suppress backgrounds, and exchanges triggers with the ATLAS experiment. The detector design, trigger concept, integration with the ATLAS experiment and a timeline towards installation in LHC Long Shutdown 4 are presented.
 
 ### 结果
-未在摘要中明确给出。
+With 3~ab$^{-1}$ at the High-Luminosity LHC, it would improve the sensitivity to exotic Higgs-boson decays into long-lived scalars by two to three orders of magnitude, probe heavy neutral leptons of all three flavours down to mixings of about $2\times10^{-8}$, and extend the reach for axion-like particles.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-To prove the converse, we apply Fawzi--Renner recovery to a hypothetical sequence of visible codes approaching the Holevo rate at vanishing local error, then invoke a decoupling bound of Baghali Khanian and Winter for blind compression.
+The detector design, trigger concept, integration with the ATLAS experiment and a timeline towards installation in LHC Long Shutdown 4 are presented.
 
-### 15. A note on input-oblivious unambiguous hierarchies
+### 19. Towards Closing the Performance Gap in Cross-Modal Place Recognition
 
-- 作者：Edward A. Hirsch｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33126v1
+- 作者：Ofer Idan, Dan Badur, Yoli Shavit｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34877v1
 
 ### 背景/问题
-Unambiguous hierarchies are defined similarly to the polynomial hierarchy; however, all witnesses must be unique. Their versions differ in the mode of using oracles.
+Cross-modal place recognition (CMPR) matches natural language descriptions against databases of geo-tagged reference images, enabling localization without visual queries. Despite its potential for language-guided navigation, existing vision-language models lag far behind visual place recognition (VPR) baselines, even after task adaptation.
 
 ### 方法
-未在摘要中明确给出。
+Despite its potential for language-guided navigation, existing vision-language models lag far behind visual place recognition (VPR) baselines, even after task adaptation. To address this challenge, we propose CrossPlace, a two-stage CMPR framework.
 
 ### 实验/数据
-未在摘要中明确给出。
+Cross-modal place recognition (CMPR) matches natural language descriptions against databases of geo-tagged reference images, enabling localization without visual queries.
 
 ### 结果
-未在摘要中明确给出。
+Through systematic analysis, we isolate the drivers of retrieval accuracy and show that visual token density provides the largest performance improvement, while text encoder capacity and task fine-tuning offer complementary gains. Across all existing and new benchmarks, CrossPlace achieves double-digit Recall@1 improvements over prior cross-modal methods, closes the gap to unimodal text retrieval, and narrows it to unimodal VPR.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-We also observe several other facts related to OUP: (1) the hierarchy defined by input-oblivious unambiguous dot-operators collapses, (2) in OUP computations, a single loose query to prOUP can be replaced by a query to OUP, (3) SOUP=OUP$\cap$coOUP, where SOUP is the same-witness class recently considered by Hirsch, Volkovich, and Williams (2026).
+Code and benchmarks are available at https://github.com/oferidan1/CrossPlace
 
-### 16. Non-formality of prefactorization algebras
+### 20. SoK: When FL Clients Cannot Train -- Delegated Federated Learning for IoT
 
-- 作者：Coline Emprin, Alex Takeda｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33125v1
+- 作者：Hamed Mohammed Alkharsh, Aydin Abadi, Jakub Szelag, Suleiman Muhammad Sabo, Ishak Semuel Beno｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34876v1
 
 ### 背景/问题
-We construct a Poisson bracket on the cohomology of locally constant prefactorization algebras on $\mathbb{R}^m$ that provides an obstruction to formality in every dimension $m\geqslant 2$. Our construction combines colored obstruction sequences to formality with linking spheres and generalizes the two-dimensional bracket of Bruinsma, Schenkel, and Vicedo.
+Federated learning (FL) assumes that a client can perform the computation required to produce its own contribution. This assumption is often unrealistic for resource-constrained Internet of Things (IoT) devices, motivating designs that delegate some or all client-side training to more capable parties.
 
 ### 方法
-未在摘要中明确给出。
+We develop a framework that examines three dimensions over the same delegated transition: delegate-view privacy, delegated attribution, and constrained-owner feasibility.
 
 ### 实验/数据
-未在摘要中明确给出。
+We systematize this setting as delegated federated learning (Delegated FL), where data ownership and execution of owner-attributed learning are separated.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-We also establish new non-formality results for factorization envelopes of Lie algebras, their compactifications and generalizations to $L_\infty$-algebras, free BF-type theories, higher abelian Chern-Simons theories and their compactifications.
+Our findings demonstrate why individually established guarantees do not necessarily support the same end-to-end claim and motivate evaluating privacy, attribution, and residual owner cost over the same delegated transition.
 
-### 17. SAG-Mem-1.0 Technical Report
+### 21. Exact monogamy of steering and remote Wigner negativity for multimode Gaussian nodes
 
-- 作者：Yuchao Wu, XingCheng Liang, Xuanze Wang, Yini Huang, Yue Wu｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33124v1
+- 作者：Sudip Chakrabarty｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34874v1
 
 ### 背景/问题
-Long-term conversational memory requires retrieving complementary facts scattered across dialogue sessions, including intermediate evidence with limited similarity to the original question. Existing approaches often rely on derived memory representations or persistent relational structures, introducing construction costs and potentially losing source details.
+Optical quantum networks route correlations through nodes that hold several modes and are linked to many neighbors. Steering is the correlation behind one-sided device-independent tasks and behind the remote preparation of non-Gaussian states.
 
 ### 方法
-Existing approaches often rely on derived memory representations or persistent relational structures, introducing construction costs and potentially losing source details. We present SAG-Mem, a conversational memory framework that preserves complete dialogue messages in non-overlapping chunks and discovers complementary evidence through query-time lexical expansion. Memory construction requires no model inference, using a lexical index without LLM-based extraction, summarization, or semantic relation construction.
+未在摘要中明确给出。
 
 ### 实验/数据
 未在摘要中明确给出。
@@ -364,264 +442,184 @@ Existing approaches often rely on derived memory representations or persistent r
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-These results support dialogue preservation and evidence-guided retrieval expansion as an effective design for long-term conversational memory.
+These results determine exactly how many neighbors one multimode node can serve with steering and with remote Wigner negativity.
 
-### 18. Scalar perturbations in extremal Reissner-Nordström geometry: new methods at work
+### 22. RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies
 
-- 作者：Giorgio Di Russo, Davide Fioravanti, Francesco Olivi, Marco Rossi｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33123v1
+- 作者：Insup Lee, Hojin Jeon, Sunguk Shin, Seoungbin Bae, Taekwan Kim, Jinwoo Shin, Dongsu Han｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34864v1
 
 ### 背景/问题
-We study scalar radiation emitted by a particle moving along a circular orbit around a four-dimensional extremal Reissner-Nordström black hole. In particular, we calculate the energy fluxes carried by scalar waves to infinity and across the event horizon, as well as the scalar self-force acting on the particle, and express all these quantities as post-Newtonian expansions.
+Since vision-language-action (VLA) policies can inherit the slow pace of human demonstrations, accelerating these demonstrations before fine-tuning can lead to faster VLA policies without an additional speed-selection module at deployment. Several offline speedup methods have focused on identifying segments that require less precision and assigning predefined speedup factors to the segments.
 
 ### 方法
-To solve the radial wave equation, we employ and test two distinct analytic approaches: the first is the so-called \textit{kink method}, a novel alternative stemming from quantum integrability and the second is the Mano-Suzuki-Takasugi method.
+Several offline speedup methods have focused on identifying segments that require less precision and assigning predefined speedup factors to the segments. To this end, this paper presents RePace, an offline reasoning framework that determines how much to accelerate each part of a demonstration. Given the task instruction, a pretrained language model uses the visual context and original motion of successive windows to interpret these candidate retiming effects and select a speedup profile for the complete episode.
 
 ### 实验/数据
-未在摘要中明确给出。
+Several offline speedup methods have focused on identifying segments that require less precision and assigning predefined speedup factors to the segments. To this end, this paper presents RePace, an offline reasoning framework that determines how much to accelerate each part of a demonstration. Experimental results demonstrate that RePace outperforms the baselines in overall task execution efficiency on both LIBERO and RoboCasa-Kitchen.
 
 ### 结果
-未在摘要中明确给出。
+Experimental results demonstrate that RePace outperforms the baselines in overall task execution efficiency on both LIBERO and RoboCasa-Kitchen.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-The perfect agreement of the results highlights the potential of the kink method as a complementary tool for studying wave propagation in black-hole spacetimes.
+On all three tasks with a gripper-equipped Franka Research 3 arm, RePace matches or exceeds the acceleration baselines in success rate and completes successful trials faster.
 
-### 19. MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing
+### 23. Focus Only on What's Important: Training-Free Focus Maps for Frozen Vision Transformers in Long-Video Object Segmentation
 
-- 作者：Scott Piersall, Yang Gao, Shenyang Liu, Liqiang Wang｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33119v1
+- 作者：Harsha Karipineni, Rajesh Reddy Chintha｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34863v1
 
 ### 背景/问题
-Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present \textsc{MetaFORGE}, an execution-grounded meta-learning framework that iteratively optimizes persistent natural-language skill specifications for MPI C code generation.
+Vision transformers are strong but costly image encoders for video object segmentation. Training-free token merging cuts compute uniformly across the frame, including on tracked objects.
 
 ### 方法
-Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present \textsc{MetaFORGE}, an execution-grounded meta-learning framework that iteratively optimizes persistent natural-language skill specifications for MPI C code generation. A model-matched refinement ablation shows that the MetaFORGE advantage persists when its refinement model is reduced to \texttt{gpt-4o}.
+未在摘要中明确给出。
 
 ### 实验/数据
-Leakage-controlled held-out and zero-update experiments further provide evidence that optimization knowledge persists in both the transferred skill and external memory under the evaluated protocol.
+未在摘要中明确给出。
 
 ### 结果
-Across six MPI tasks and three workload sizes, \textsc{MetaFORGE} improves static-analysis quality, runtime, and load balance relative to zero-shot generation and generally exceeds the evaluated \textsc{TextGrad} iterative baseline.
+未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Leakage-controlled held-out and zero-update experiments further provide evidence that optimization knowledge persists in both the transferred skill and external memory under the evaluated protocol.
+Code: https://github.com/boletoms/focused-cv
 
-### 20. Evolutionary constraints on protein fold diversity
+### 24. An offset--drift Kalman filter for continuous emotion recognition and annotation from sparse human reviews
 
-- 作者：Harutyun Sahakyan, Eugene V. Koonin｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33104v1
+- 作者：Jie Dong, Mahdi Zareei｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34857v1
 
 ### 背景/问题
-Arrangements of secondary structures in proteins yield a wide variety of possible topologies, yet the protein folds observed in nature are limited in their diversity. Is the number of protein folds limited by biophysical constraints or by evolutionary contingency?
+Continuous emotion recognition tracks how emotion changes over time, but its predictions often deviate from human ratings, and the traces it is trained on are rated in real time by several annotators, which is slow and costly. A few human reviews could help with both, but rejection only decides which predictions to hand over and adaptation adjusts the model or its outputs; neither uses reviews to correct unreviewed windows directly.
 
 ### 方法
-Here, we present recent findings demonstrating that natural proteins adopt only a small fraction of all possible folds and discuss how evolutionary processes limit the diversity of evolving protein folds.
+A few human reviews could help with both, but rejection only decides which predictions to hand over and adaptation adjusts the model or its outputs; neither uses reviews to correct unreviewed windows directly. We propose a Kalman-filter correction that models the predictor's error as a per-part offset plus a slow drift, estimates it from the reviewed windows and corrects every unreviewed window online, leaving the predictor unchanged.
 
 ### 实验/数据
-未在摘要中明确给出。
+We propose a Kalman-filter correction that models the predictor's error as a per-part offset plus a slow drift, estimates it from the reviewed windows and corrects every unreviewed window online, leaving the predictor unchanged.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Here, we present recent findings demonstrating that natural proteins adopt only a small fraction of all possible folds and discuss how evolutionary processes limit the diversity of evolving protein folds.
+The same correction serves annotation: with 20% of windows reviewed, the completed trace comes closer to the raters.
 
-### 21. GREMLIN: Generating Random Environments for Meta-Learning with Interacting Networks
+### 25. On Zappa--Szép products of multiplicative racks
 
-- 作者：Octave Gaspard｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33101v1
+- 作者：Akihiro Takano｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34851v1
 
 ### 背景/问题
-Can randomly parameterized neural environments supply useful experience for learning a reinforcement learning algorithm? We investigate this question using DiscoRL's rule-discovery framework, replacing human-designed training games with sixteen selected neural environments.
+We study Zappa--Szép products of multiplicative racks, namely monoids equipped with compatible rack operations. We characterize multiplicative rack structures on Zappa--Szép products of monoids and prove that every exact factorization of multiplicative racks induces a canonical exact factorization of their universal groups.
 
 ### 方法
-We investigate this question using DiscoRL's rule-discovery framework, replacing human-designed training games with sixteen selected neural environments. It remains unclear whether this approach can yield a competitive rule with longer meta-training.
+未在摘要中明确给出。
 
 ### 实验/数据
 未在摘要中明确给出。
 
 ### 结果
-GREMLIN nevertheless outperformed the untrained teacher on all 26 games, showing that generated experience can improve a learning rule.
+未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-It remains unclear whether this approach can yield a competitive rule with longer meta-training.
+Finally, we use a layered central-quotient construction to obtain finite and infinite non-cancellative multiplicative quandles with non-group factors and nontrivial Zappa--Szép actions, all directly indecomposable as monoids.
 
-### 22. EventDiffusion: Learning Native Event Stream Distribution from Videos
+### 26. Quot schemes on projective space
 
-- 作者：Karthik Sundar Senthilkumar, Christopher Thirgood, Simon Hadfield｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33096v1
+- 作者：Ritvik Ramkumar｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34844v1
 
 ### 背景/问题
-Event cameras capture asynchronous brightness changes at high temporal resolution, but scarce recordings constrain data-driven research. Sparse RGB observations cannot uniquely determine intervening events since identical frames may correspond to streams with different activity, polarities, and timing.
+We develop general methods for studying Quot schemes on projective space, including a new construction of components with no common neighbours. We show that the radius of Hilbert and Quot schemes can grow linearly with the dimension of the subschemes being parametrized, and construct the first examples of Hilbert schemes of curves with radius two.
 
 ### 方法
-We introduce EventDiffusion, a hierarchical generative framework that directly learns the conditional distribution of native asynchronous event streams from real recordings.
+We develop general methods for studying Quot schemes on projective space, including a new construction of components with no common neighbours.
 
 ### 实验/数据
-Event cameras capture asynchronous brightness changes at high temporal resolution, but scarce recordings constrain data-driven research. Across all datasets, EventDiffusion achieves double the accuracy of SOTA methods and demonstrates robustness across different cameras at any resolution.
+未在摘要中明确给出。
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Across all datasets, EventDiffusion achieves double the accuracy of SOTA methods and demonstrates robustness across different cameras at any resolution.
+In most cases, we give explicit geometric descriptions in terms of products of generalized flag varieties and projective bundles over Grassmannians.
 
-### 23. AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design
+### 27. A Reconfigurable Four-State Sensor Based on Orthogonal Thermal and Chemical Stimuli
 
-- 作者：Guangyuan Wang, Chengran Li, Minchen Luo, Jichen Feng, Mengdi Wang, Yifan Zhang｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33093v1
+- 作者：Ashfaq Ur Rahman Ifty, Sadia Basher, Abdullah Al Zayed, Mohammad Abrar Kabir, Rakibul Hasan Sagor｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34834v1
 
 ### 背景/问题
-A language-model decoder carries state between decoding steps, and in hardware a wrong state update can leave the current token correct and corrupt the output several tokens later, so a design can pass output tests and still be wrong. AIChipBench asks what LLM coding agents need to build such hardware correctly.
+This article presents a novel four-state refractive index (RI) sensor based on distinct phases of palladium (Pd) and vanadium dioxide (VO$_2$), controlled by orthogonal thermal and chemical stimuli. This is a numerical, simulation-only study: all results are obtained from two-dimensional finite-element method (FEM) simulations.
 
 ### 方法
-A language-model decoder carries state between decoding steps, and in hardware a wrong state update can leave the current token correct and corrupt the output several tokens later, so a design can pass output tests and still be wrong.
+The proposed sensor achieves a peak sensitivity of 2871 nm/RIU for the undoped reference configuration and 2798 nm/RIU for the practical W-doped device, together with a peak CSS of 16,872 nm/RIU, establishing it as a multi-state reconfigurable platform with reduced thermal crosstalk and potential applications in industrial safety monitoring and optical logic gates.
 
 ### 实验/数据
-未在摘要中明确给出。
+This is a numerical, simulation-only study: all results are obtained from two-dimensional finite-element method (FEM) simulations.
 
 ### 结果
 未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-Hardware agents therefore need debugging feedback that exposes stored state, and their benchmarks need final tests well beyond the development cases.
+The proposed sensor achieves a peak sensitivity of 2871 nm/RIU for the undoped reference configuration and 2798 nm/RIU for the practical W-doped device, together with a peak CSS of 16,872 nm/RIU, establishing it as a multi-state reconfigurable platform with reduced thermal crosstalk and potential applications in industrial safety monitoring and optical logic gates.
 
-### 24. Anharmonic enhancement of thermal conductivity in amorphous Ge$_2$Sb$_2$Te$_5$: A consistent picture from molecular dynamics and Wigner transport
+### 28. Not all world models can doubt: how training objective and architecture shape epistemic uncertainty in JEPA and RSSM world models
 
-- 作者：Luiz Felipe C. Pereira, Kamil Iwanowski, Michele Simoncelli, Omar Abou El Kheir, Marco Bernasconi, Riccardo Mazzarello, Francesco Mauri｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33089v1
+- 作者：Simon Baur, Wojciech Samek, Jackie Ma｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34830v1
 
 ### 背景/问题
-Anharmonicity limits heat conduction in crystals, but its role in amorphous solids, where heat is carried mainly by tunneling between quasi-degenerate vibrations, remains unsettled. Here we disentangle the contributions of structural disorder, quantum statistics, and anharmonicity to the thermal conductivity of amorphous Ge$_2$Sb$_2$Te$_5$ (aGST), the prototypical phase-change memory material.
+World models predict how an environment responds to actions, so that candidate actions can be evaluated before execution. Executed actions, or decisions, taken in this manner are only as reliable as the model's predictive capabilities, and predictions in turn are only reliable within the model's experience.
 
 ### 方法
-Four MD approaches agree on a conductivity of 0.171-0.181 W m$^{-1}$ K$^{-1}$ at room temperature, about 16% above the harmonic Allen-Feldman value for the same model, and the Wigner formulation bridges the two: with classical statistics, it agrees with MD to within 5%.
+World models predict how an environment responds to actions, so that candidate actions can be evaluated before execution. Executed actions, or decisions, taken in this manner are only as reliable as the model's predictive capabilities, and predictions in turn are only reliable within the model's experience. In this work we offer an extensive empirical study on how training objectives and architectures shape epistemic uncertainty of world models.
 
 ### 实验/数据
-Using a single machine-learned potential trained on first-principles data, we compare classical equilibrium and nonequilibrium molecular dynamics (MD), which include anharmonicity to all orders, with harmonic Allen-Feldman theory and the anharmonic Wigner transport equation, both of which include quantum statistics.
+未在摘要中明确给出。
 
 ### 结果
-The predicted glass-like increase of the conductivity with temperature is consistent with thermoreflectance measurements.
+未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-These results show that anharmonicity has no universal effect in disordered solids, and can promote rather than limit heat transport in strongly disordered materials.
+We further show that this translates to gaps in five uncertainty related downstream tasks, from unfamiliar-state detection to uncertainty-penalised planning: the RSSM uncertainty misses deviations that its own posterior registers, whereas the JEPA uncertainty reports what its model sees.
 
-### 25. Breaking the Square-Root Barrier for Linear Swap Regret in Polyhedral Games
+### 29. The Linguistic Knowledge Benchmark: Do Language Models Know the Foundations of Early-Grade Literacy?
 
-- 作者：Vasilis Pollatos, Alberto Marchesi｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33081v1
+- 作者：Maxime Lelièvre, Alasdair Mackintosh, Dominic Andrews, Tobias Murray, Moritz Boos, Oliver G. B. Garrod｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34823v1
 
 ### 背景/问题
-We study linear swap regret in self-play against all affine self-maps of each player's strategy polytope. Efficient adversarial bounds for this class scale as $\sqrt{T}$.
+Many languages of instruction in low- and middle-income countries (LMICs) are poorly represented in the data used to train language models. Before these models can support early-grade literacy in such languages, we need to know whether they hold the linguistic knowledge of each language that literacy teaching relies on.
 
 ### 方法
-未在摘要中明确给出。
+Many languages of instruction in low- and middle-income countries (LMICs) are poorly represented in the data used to train language models. Before these models can support early-grade literacy in such languages, we need to know whether they hold the linguistic knowledge of each language that literacy teaching relies on. To test this, we present the Linguistic Knowledge Benchmark and the reproducible, largely automated pipeline that turns curriculum documents, teacher guides and pupil books into a vetted question set organised on a fixed grid of nine linguistic domains and seven grade levels.
 
 ### 实验/数据
-未在摘要中明确给出。
+Many languages of instruction in low- and middle-income countries (LMICs) are poorly represented in the data used to train language models.
 
 ### 结果
-The proof combines optimistic log-barrier learning on a compact matrix lift with stability of the Gordon fixed point, using treeplex geometry in extensive form.
+未在摘要中明确给出。
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-The proof combines optimistic log-barrier learning on a compact matrix lift with stability of the Gordon fixed point, using treeplex geometry in extensive form.
+This is the first rung of a three-level evaluation ladder for measuring and generating decodable text to support foundational literacy.
 
-### 26. $S$-preclones and the Galois connection ${}^S\mathrm{Pol}$-${}^S\mathrm{Inv}$, Part II: Boolean $\pm$-preclones
+### 30. LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?
 
-- 作者：Peter Jipsen, Erkko Lehtonen, Reinhard Pöschel｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33066v1
+- 作者：Zichen Tian, Yudong Lu, Xuansheng Wu, Na Zou, Xia Hu, Guanchu Wang, Qianru Sun｜年份：2026｜发布时间：2026-11-25｜来源：arxiv｜相关度分：**2.50**
+- 链接：https://arxiv.org/abs/2611.34821v1
 
 ### 背景/问题
-We continue the investigation of $S$-preclones initiated in Part I, specializing to the case of Boolean $\pm$-preclones where $S = \{+,-\}$ is the two-element group and the base set is $A = \{0,1\}$. The main results include the complete classification of maximal and minimal Boolean $\pm$-preclones in the lattice ${}^{\pm}\mathcal{L}_2$ of all Boolean $\pm$-preclones.
+Looped Mixture-of-Experts (MoE) architectures revisit layer parameters across depths. This design increases effective depth without adding parameters.
 
 ### 方法
-未在摘要中明确给出。
+Accordingly, we propose LoopTitan-Base as a stronger MoE baseline. We open-source LoopTitan and release 17 pretrained models (including LoopTitan-Base and the control).
 
 ### 实验/数据
-未在摘要中明确给出。
+Our experiment record is public as GitHub issues, with predictions pre-registered and the full exploration history kept.
 
 ### 结果
-未在摘要中明确给出。
+This design increases effective depth without adding parameters. First, at matched budgets, we decompose the state-of-the-art looped recipe, with revisit last.
 
 ### 结论/启示（面向电商发券、定价、营销算法等应用）
-We also prove a Baker--Pixley type theorem for $\pm$-preclones containing the majority operation, showing that such $\pm$-preclones are determined by their binary $\pm$-relations.
-
-### 27. Local Indices Are Not Enough: Synchrony and Global Information in Bandit Algorithms
-
-- 作者：Aakash Gore, Shivaram Kalyanakrishnan｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33056v1
-
-### 背景/问题
-Standard index-based stochastic bandit algorithms such as KL-UCB and Thompson Sampling achieve optimal $O(\log T)$ regret over a horizon $T$. The former uses the global timestep to construct each arm's index, while the latter samples each arm's belief distribution at every timestep.
-
-### 方法
-We propose an asynchronous local index policy whose regret upper bound also lies in this regime.
-
-### 实验/数据
-未在摘要中明确给出。
-
-### 结果
-未在摘要中明确给出。
-
-### 结论/启示（面向电商发券、定价、营销算法等应用）
-Turning to synchronous local algorithms, which sample every arm's index at all timesteps as in Thompson Sampling, we show that a locally determined randomness budget per arm suffices to retain $O(\log T)$ regret, demonstrating that synchrony, albeit with some randomness, is essential to the optimality of Thompson Sampling.
-
-### 28. EmbodiSafety: Benchmarking Risk Understanding and Response in Embodied AI
-
-- 作者：Erfei Cui, Shengjia Zhao, Yan Qin, Kaixuan Wang, Junming Chen, Ping Luo, Tianxing Chen｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33054v1
-
-### 背景/问题
-Progress in embodied foundation models is largely measured by task success, while the physical safety of their decisions remains underexamined. Safety evaluations centered on rule following and binary judgments do not adequately assess whether embodied models understand environmental hazards and make safe decisions.
-
-### 方法
-Progress in embodied foundation models is largely measured by task success, while the physical safety of their decisions remains underexamined. Safety evaluations centered on rule following and binary judgments do not adequately assess whether embodied models understand environmental hazards and make safe decisions. Claude-Opus-5.5 achieves the highest complete decision accuracy among reference models, reaching 56.1% on snapshots and 61.5% on trajectories.
-
-### 实验/数据
-We further develop a data construction pipeline and curate 40k examples for safety alignment.
-
-### 结果
-未在摘要中明确给出。
-
-### 结论/启示（面向电商发券、定价、营销算法等应用）
-Supervised training on this corpus raises the complete decision accuracy of Qwen3.5-2B and Qwen3.5-4B.
-
-### 29. When Is Product Decoding of ECOC MAP-Consistent? Pair Structure and the n-vs-Rest Codes
-
-- 作者：Gendo Kumoi｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33044v1
-
-### 背景/问题
-Error-Correcting Output Codes (ECOC) combine binary classifiers by the sum decoder, which totals probabilities, or the product decoder, which totals log-likelihoods. In the noiseless setting, where the binary classifiers output the true posteriors, we ask on which code matrices each decoder always agrees with the Bayes-optimal (MAP) class.
-
-### 方法
-未在摘要中明确给出。
-
-### 实验/数据
-On six real datasets with estimated probabilities, the product decoder is slightly more accurate when each column is calibrated, and the sum decoder is better when the calibration error differs across columns; in either case the decoders disagree only near ties.
-
-### 结果
-On six real datasets with estimated probabilities, the product decoder is slightly more accurate when each column is calibrated, and the sum decoder is better when the calibration error differs across columns; in either case the decoders disagree only near ties.
-
-### 结论/启示（面向电商发券、定价、营销算法等应用）
-On six real datasets with estimated probabilities, the product decoder is slightly more accurate when each column is calibrated, and the sum decoder is better when the calibration error differs across columns; in either case the decoders disagree only near ties.
-
-### 30. Certifying total-variation contamination by betting on trimmed kernel witnesses
-
-- 作者：Hristo Inouzhe Valdes｜年份：2026｜发布时间：2026-11-24｜来源：arxiv｜相关度分：**2.50**
-- 链接：https://arxiv.org/abs/2611.33039v1
-
-### 背景/问题
-Two laws share a common component after each discards a fraction $α$ of its mass, a trimming, exactly when their total variation is at most $α$, so the contamination level $α^\star = \mathrm{TV} (P,Q)$ is the share of each population without counterpart in the other. We bound it from below from two samples on any space with a bounded characteristic kernel.
-
-### 方法
-未在摘要中明确给出。
-
-### 实验/数据
-We fit a ramp of the witness on part of the data and bet on the rest, at each level of a grid. On the Right Heart Catheterization data, with confidence $0.95$, each arm must lose more than a fraction $0.35$ of its patients, if both lose the same fraction, before their covariate distributions can coincide.
-
-### 结果
-未在摘要中明确给出。
-
-### 结论/启示（面向电商发券、定价、营销算法等应用）
-On the Right Heart Catheterization data, with confidence $0.95$, each arm must lose more than a fraction $0.35$ of its patients, if both lose the same fraction, before their covariate distributions can coincide.
+This is our Phase 1 technical report, laying the foundation for follow-up studies.
